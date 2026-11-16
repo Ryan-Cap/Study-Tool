@@ -309,5 +309,6 @@ def next_flashcard(state: State, index: int) -> Page:
     return flashcards(state, index)
 
 
-
+set_site_information(author = "Ryan Caputo",
+                     description = "A study tool that I built in Drafter. No AI was used.")
 start_server(State([], Set("", []), 0, False))
