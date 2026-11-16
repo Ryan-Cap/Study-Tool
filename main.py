@@ -310,5 +310,6 @@ def next_flashcard(state: State, index: int) -> Page:
 
 
 set_site_information(author = "Ryan Caputo",
-                     description = "A study tool that I built in Drafter. No AI was used.")
+                     description = "A study tool that I built in Drafter. No AI was used.",
+                     links = "https://github.com/Ryan-Cap/Study-Tool")
 start_server(State([], Set("", []), 0, False))
