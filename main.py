@@ -277,9 +277,14 @@ def flashcards(state: State, index: int) -> Page:
         card_text = current_set.concepts[state.concept_index].definition
     return Page(state, [
         "Click on the term/definition to flip!",
-        Button(card_text, "flip_card", Argument("index", index)),
         Button("Next", "next_flashcard", Argument("index", index)),
-        Button("Home", "index")
+        Button("Home", "index"),
+        "\n",
+        Div(Button(card_text, "flip_card", Argument("index", index),
+               style_font_size = "30px",
+               style_width = "350px", style_height = "350px",
+               style_text_align = "center",
+               style_justify_content = "center"))
         ])
 
 
