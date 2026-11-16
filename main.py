@@ -4,6 +4,12 @@ from dataclasses import dataclass
 
 hide_debug_information()
 set_website_title("Study Tool")
+set_site_information(author = "Ryan Caputo",
+                     description = "A study tool that I built in Drafter. No AI was used.",
+                     sources = [""],
+                     planning = [""],
+                     links = "https://github.com/Ryan-Cap/Study-Tool")
+
 
 @dataclass
 class Concept:
@@ -309,7 +315,4 @@ def next_flashcard(state: State, index: int) -> Page:
     return flashcards(state, index)
 
 
-set_site_information(author = "Ryan Caputo",
-                     description = "A study tool that I built in Drafter. No AI was used.",
-                     links = "https://github.com/Ryan-Cap/Study-Tool")
 start_server(State([], Set("", []), 0, False))
